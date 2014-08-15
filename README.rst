@@ -53,15 +53,18 @@ I saw this and never did any parsing scraping in Go, so I though I'd give it a w
 
 Install
 =======
+::
 
-  go get github.com/reedobrien/getmissions
+  go get github.com/reedobrien/isat-smd-missions/getmissions
 
-or if merged
+or if merged::
 
-  github.com/koansys/getmissions
+  go get github.com/koansys/isat-smd-missions/getmissions
 
 Usage
 =====
+
+::
 
   getmissions -h
     -json=false: Output JSON instead of tab delimited
@@ -69,11 +72,15 @@ Usage
 Run
 ===
 
+::
+
   getmissions
 
-or
+or::
 
   getmissions -json
+
+or::
 
   getmissions|pbcopy ## then paste into spreadsheet
 
