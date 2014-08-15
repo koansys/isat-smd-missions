@@ -31,11 +31,11 @@ It shows the Mission URL slug, mission name, SMD division, and operating status:
 
   (mission-extract-data)bash-3.2$ ./missions.py
   Row results:  208
-  ace                           	ACE                                     	Heliophysics        	3Operating          
-  acrimsat                      	ACRIMSAT                                	Earth               	3Operating          
+  ace                           	ACE                                     	Heliophysics        	3Operating
+  acrimsat                      	ACRIMSAT                                	Earth               	3Operating
   ...
-  xmm-newton                    	XMM-Newton                              	Astrophysics        	3Operating          
-  yohkoh                        	Yohkoh                                  	Heliophysics        	4Past               
+  xmm-newton                    	XMM-Newton                              	Astrophysics        	3Operating
+  yohkoh                        	Yohkoh                                  	Heliophysics        	4Past
   Operating: 277
 
 Misfeatures
@@ -46,3 +46,45 @@ combined item, due to how my parsing grabs the 'hide' data::
 
   ...<td><span class="hide">3</span>Operating</td></tr>
 
+Shits and giggles
+=================
+
+I saw this and never did any parsing scraping in Go, so I though I'd give it a whirl to see what it looked like.
+
+Install
+=======
+::
+
+  go get github.com/reedobrien/isat-smd-missions/getmissions
+
+or if merged::
+
+  go get github.com/koansys/isat-smd-missions/getmissions
+
+Usage
+=====
+
+::
+
+  getmissions -h
+    -json=false: Output JSON instead of tab delimited
+
+Run
+===
+
+::
+
+  getmissions
+
+or::
+
+  getmissions -json
+
+or::
+
+  getmissions|pbcopy ## then paste into spreadsheet
+
+Notes
+=====
+
+It only gets Operating missions.
